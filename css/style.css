@@ -1,0 +1,57 @@
+.grafico{
+    background: white;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+.cuestionario{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#enviar{
+    background-color: lightslategray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    box-shadow: lightslategray;
+    margin-top: 15px;
+    width: 70px;
+    font-size: 15px;
+}
+
+#enviar:hover{
+    cursor: pointer;
+}
+
+.respuestas label{
+    cursor: pointer;
+}
+
+.pregunta{
+    display: none;
+}
+
+#pdf{
+    display: none;
+}
+
+label{
+    background-color: #f2f2f2;
+    color: #575859;
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+}
+
+label:hover{
+    background-color: mediumaquamarine;
+    transition: all 0.5s ease;
+    color: white;
+}
