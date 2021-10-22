@@ -11,7 +11,7 @@ var myChart = new Chart(ctx,{
         datasets:[{            
             label:'Dato de prueba',
             //datos de la grafica
-            data:[],             
+            data:[0,0,0,0,0,0,0,0,0,0,0,0],             
             //atributo para rellenar el contenido de los datos 
             fill:true,
             //estilos del trazado
@@ -22,48 +22,29 @@ var myChart = new Chart(ctx,{
     },
     options: {
         //escalado de la grafica
-        scales: {
-            r: {
+        scale: {
+            ticks: {
                 //valor minimo del escalado
-                suggestedMin: 0,
+                beginAtZero: true,
                 //valor maximo del escalado
-                suggestedMax: 5
+                max: 5
             }
         }
     }   
-});       
+});
 
-//Evento de boton
-document.getElementById("impdata").addEventListener("click",function(){    
-    
-    //array de los elementos input del HTML cuyo tipo es number
-    var array = document.querySelectorAll("input[type='number']");
-    //futuro array de los valores de los elemetos del array previamente declarado
-    var values = [];
-
-    //Comprovacion que los valores esten comprendidos entre 0 y 5
-    for(i=0;i<12;i++){
-        if(array[i].value>=0 && array[i].value<=5){
-            values[i] = array[i].value; 
-            console.log(values);
-        }else{
-            console.log("los valores tienen que estar comprendidos entre 0 y 5");
-        }  
+numPregunta = 1;
+document.getElementById("enviar").addEventListener("click",function(){
+    var arrayRadios = document.getElementsByName("p"+numPregunta);
+    console.log(arrayRadios);
+    var valores = [];
+    for(i=0;i<arrayRadios.length;i++){
+        if(arrayRadios[i].checked){
+            valores[i] = arrayRadios[i].value;
+            myChart.data.datasets[0].data[numPregunta-1] = valores[i];
+            myChart.update();
+            numPregunta++;            
+            console.log(myChart.data.datasets[0].data);
+        }
     }
-
-    //Actualizacion de la grafica aplicando los valores introducidos por los campos input
-    myChart.data.datasets[0].data = values;    
-    myChart.update();
-
-})
-
-/*
-    var valor;
-    if(document.getElementById("p"+visible+"-1").checked){
-        valor = document.getElementById("p"+visible+"-1").value;
-    }else if(document.getElementById("p"+visible+"-2").checked){
-        valor = document.getElementById("p"+visible+"-2").value;
-    }else if(document.getElementById("p"+visible+"-3").checked){
-        valor = document.getElementById("p"+visible+"-3").value;
-    }
-*/
+});

@@ -62,22 +62,6 @@ document.getElementById("enviar").addEventListener("click",function(){
             }
         }
     }
-    /*else if(visible-1>0 || visible==1){
-        document.getElementById("back").style.display = "inline-block";
-        if(visible+1!=21){
-            respuestaActiva = document.getElementsByName("p"+indice);
-            var valoresPreguntas = [];
-            for(i=0;i<respuestaActiva.length;i++){
-                if(respuestaActiva[i].checked){
-                    valoresPreguntas[i] = respuestaActiva[i].value;                
-                    visible++;
-                    mostrarPregunta(visible);
-                    console.log(visible);
-                    indice++;
-                }
-            }     
-        }
-    }*/
 });
 
 document.getElementById("back").addEventListener("click",function(){
