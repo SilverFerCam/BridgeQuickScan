@@ -20,28 +20,28 @@ function anteriorPregunta(indice){
 //Al hacer click en el boton enviar se ejecuta la funcion mostrarPregunta()
 //Si El indice no supera el valor maximo de preguntas, vease 20
 document.getElementById("enviar").addEventListener("click",function(){
-    if(visible+1!=21){
-        respuestaActiva = document.getElementsByName("p"+indice);
-        var valoresPreguntas = [];
-        for(i=0;i<respuestaActiva.length;i++){
-            if(respuestaActiva[i].checked){
-                valoresPreguntas[i] = respuestaActiva[i].value;                
-                visible++;
-                mostrarPregunta(visible);
-                indice++;
-            }
-        }        
-    }if(visible-1>0){
-        console.log(visible-1)
-        anteriorPregunta(visible-1);
-        visible--;
-    }else{
+    if(visible==20){
         document.getElementById("enviar").style.display = "none";
-        document.getElementById("pdf").style.display = "block";
+        document.getElementById("pdf").style.display = "inline-block";
+        document.getElementById("back").style.display = "inline-block";
+    }else if(visible-1>0 || visible==1){
+        document.getElementById("back").style.display = "inline-block";
+        if(visible+1!=21){
+            respuestaActiva = document.getElementsByName("p"+indice);
+            var valoresPreguntas = [];
+            for(i=0;i<respuestaActiva.length;i++){
+                if(respuestaActiva[i].checked){
+                    valoresPreguntas[i] = respuestaActiva[i].value;                
+                    visible++;
+                    mostrarPregunta(visible);
+                    indice++;
+                }
+            }     
+        }
     }
 });
 
-
+//Sistema para ocultar los circulos de los radio buttons del HTML
 var radios = document.querySelectorAll("input[type='radio']");
 for(k=0;k<radios.length;k++){
     radios[k].style.visibility = "hidden";
