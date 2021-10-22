@@ -30,6 +30,39 @@
     cursor: pointer;
 }
 
+#pdf{
+    background-color: lightslategray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    box-shadow: lightslategray;
+    margin-top: 15px;
+    width: 130px;
+    font-size: 15px;
+}
+
+#pdf:hover{
+    cursor: pointer;
+}
+
+#back{
+    display: none;
+    background-color: lightslategray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    box-shadow: lightslategray;
+    margin-top: 15px;
+    width: 70px;
+    font-size: 15px;
+}
+
+#back:hover{
+    cursor: pointer;
+}
+
 .respuestas label{
     cursor: pointer;
 }
@@ -51,7 +84,16 @@ label{
 }
 
 label:hover{
-    background-color: mediumaquamarine;
+    background-color: aquamarine;    
     transition: all 0.5s ease;
     color: white;
+}
+
+input:checked + label {
+    background-color: mediumaquamarine;
+    color: white;
+}
+
+input[type="radio"]{
+    visibility: hidden;
 }
