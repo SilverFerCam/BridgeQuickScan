@@ -46,6 +46,7 @@ document.getElementById("enviar").addEventListener("click",function(){
         document.getElementById("enviar").style.display = "none";
         document.getElementById("pdf").style.display = "inline-block";
         document.getElementById("back").style.display = "inline-block";
+        document.getElementById("update").style.display = "inline-block";
     }else if(visible==1){     
         respuestaActiva = document.getElementsByName("p"+visible);
         for(i=0;i<respuestaActiva.length;i++){

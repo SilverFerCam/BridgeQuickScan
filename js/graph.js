@@ -263,7 +263,7 @@ document.getElementById("update").addEventListener("click",function(){
                 }
                 case 17:{
                     Cat9[4] = parseInt(arrayRadios[i].value);
-                    var media = (Cat9[0]+Cat9[1]+Cat9[2]+Cat9[3]+Cat9[4]+Cat9[5])/6;
+                    var media = (Cat9[0]+Cat9[1]+Cat9[2]+Cat9[3]+Cat9[4]+Cat9[5])/6;                    
                     myChart.data.datasets[0].data[9] = media;
                     myChart.update();
                     break;
