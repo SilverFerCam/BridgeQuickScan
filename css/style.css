@@ -1,3 +1,21 @@
+body{
+    margin: 0;
+}
+
+.barra{
+    width: 100%;
+    background-color: rgb(34, 65, 48);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.logo{
+    padding: 10px;
+    width: 7%;
+    margin-left: 10px;
+}
+
 .grafico{
     display: block;
     background: white;

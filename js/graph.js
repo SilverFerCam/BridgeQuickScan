@@ -25,10 +25,9 @@ var myChart = new Chart(ctx,{
         }]
     },
     options: {
-        plugins:{
-            legend:{
-                position:'bottom'
-            }
+        resposive: 'true',
+        legend:{
+            position: 'bottom'
         },
         //escalado de la grafica
         scale: {
@@ -156,7 +155,6 @@ document.getElementById("back").addEventListener("click",function(){
 
 document.getElementById("update").addEventListener("click",function(){
     var arrayRadios = document.getElementsByName("p"+numPregunta);
-    console.log(numPregunta);
 
     for(i=0;i<arrayRadios.length;i++){
         if(arrayRadios[i].checked){
