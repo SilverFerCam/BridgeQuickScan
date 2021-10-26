@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="graph" class="grafico">
-        <canvas id="myChart" width="400" height="400"></canvas>
+        <canvas id="myChart" width="400" height="400" position="relative"></canvas>
     </div>    
     <div class="cuestionario" id="quiz">
         <form>
@@ -337,11 +337,15 @@
                     <input type="radio" id="p20-3" name="p20" value="5">
                     <label for="p20-3">My team actively applies improvement methodologies on a regular basis (e.g. weekly basis). We strive to develop a culture of continuous improvement.</label>
                 </div>
-            </div>
+            </div>            
+        </form>
+        <div class="botones">
             <input type="button" id="back" value="Back">
+            <input type="button" id="update" value="Update">
+            <input type="button" id="siguiente" value="Next">
             <input type="button" id="enviar" value="Next">
             <input type="button" id="pdf" value="Generar PDF">
-        </form>
+        </div>        
     </div>
 </body>
 <script src="js/graph.js"></script>

@@ -1,4 +1,5 @@
 .grafico{
+    display: block;
     background: white;
     width: 500px;
     height: 500px;
@@ -13,6 +14,11 @@
     justify-content: center;
     align-items: center;
     max-width: 1000px;
+}
+
+.pregunta{
+    width: 100%;
+    display: inline-block;
 }
 
 #enviar{
@@ -64,6 +70,40 @@
     cursor: pointer;
 }
 
+#siguiente{
+    display: none;
+    background-color: lightslategray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    box-shadow: lightslategray;
+    margin-top: 15px;
+    width: 70px;
+    font-size: 15px;
+}
+
+#siguiente:hover{
+    cursor: pointer;
+}
+
+#update{
+    display: none;
+    background-color: lightslategray;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    box-shadow: lightslategray;
+    margin-top: 15px;
+    width: 70px;
+    font-size: 15px;
+}
+
+#update:hover{
+    cursor: pointer;
+}
+
 .respuestas label{
     cursor: pointer;
 }
@@ -74,6 +114,11 @@
 
 #pdf{
     display: none;
+}
+
+.botones{
+    width: 100%;
+    height: 75px;
 }
 
 label{
