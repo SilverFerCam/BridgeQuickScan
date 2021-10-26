@@ -19,8 +19,10 @@ body{
 .grafico{
     display: block;
     background: white;
-    width: 500px;
-    height: 500px;
+    min-width: 200px;
+    max-width: 500px;
+    /*width: 500px;
+    height: 500px;*/
     margin: auto;
 }
 .cuestionario{
@@ -161,3 +163,9 @@ input:checked + label {
 input[type="radio"]{
     visibility: hidden;
 }
+
+@media (max-width: 520px) {
+    .grafica {
+        width: 200px;
+    }
+  }
