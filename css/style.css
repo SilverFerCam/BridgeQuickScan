@@ -14,6 +14,7 @@ body{
     padding: 10px;
     width: 7%;
     margin-left: 10px;
+    min-width: 100px;
 }
 
 .grafico{
@@ -21,8 +22,6 @@ body{
     background: white;
     min-width: 200px;
     max-width: 500px;
-    /*width: 500px;
-    height: 500px;*/
     margin: auto;
 }
 .cuestionario{
