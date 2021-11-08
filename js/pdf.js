@@ -142,8 +142,18 @@ document.getElementById("pdf").addEventListener("click",function(){
       onrendered: function(canvas) {
          var img = canvas.toDataURL();
          var doc = new jsPDF();
-         doc.text(30,30,'Quiz Results:');
-         doc.addImage(img, 30, 30);
+
+         console.log(doc.getFontList());
+
+         function setTitulo(){
+            doc.setFont("")
+         }
+
+         //Primera Pagina
+         doc.text(20,30,'Quiz Results:');
+         doc.addImage(img, 20, 30);
+
+         //Segunda Pagina
          doc.addPage();
          doc.text(20,30,'Skills Results:');
          doc.text(20,40,'Guiding Principles:\n'+resultados[0]);
