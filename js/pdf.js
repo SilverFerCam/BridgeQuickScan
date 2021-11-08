@@ -116,11 +116,11 @@ document.getElementById("pdf").addEventListener("click",function(){
          //Undecima Categoria
          case 10:{
             if(datos[i]>=1 && datos[i]<=2.45){
-               resultados[i] = "Low maturity of technical management practices that have been adapted from technology domains and integrated\nin a mostly stable IT service delivery by a purpose of expanding or shifting their focus \nfrom technology solutions to IT services. Examples: Deployment management, infrastructure and platform management.";
+               resultados[i] = "Low maturity of technical management practices that have been adapted from technology domains and integrated\nin a mostly stable IT service delivery by a purpose of expanding or shifting their focus from technology\nsolutions to IT services. Examples: Deployment management, infrastructure and platform management.";
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
-               resultados[i] = "Average maturity of technical management practices that have been adapted from technology domains and\nintegrated in a successful IT service delivery by a purpose of expanding or shifting their focus \nfrom technology solutions to IT services. Examples: Deployment management, infrastructure and platform management.";
+               resultados[i] = "Average maturity of technical management practices that have been adapted from technology domains and\nintegrated in a successful IT service delivery by a purpose of expanding or shifting their focus from technology\nsolutions to IT services. Examples: Deployment management, infrastructure and platform management.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "High maturity of technical management practices that have been adapted from technology domains and integrated\nin a successful and proactive IT service delivery by a purpose of expanding or shifting \ntheir focus from technology solutions to IT services. Examples: Deployment management, infrastructure and platform management.";
+               resultados[i] = "High maturity of technical management practices that have been adapted from technology domains and integrated\nin a successful and proactive IT service delivery by a purpose of expanding or shifting their focus from\ntechnology solutions to IT services. Examples: Deployment management, infrastructure and platform management.";
             }
             break;
          }
@@ -152,8 +152,8 @@ document.getElementById("pdf").addEventListener("click",function(){
          }
 
          function setTitulo(){
-            doc.setFont("helvetica","normal");
-            doc.setFontSize(15);
+            doc.setFont("helvetica","bold");
+            doc.setFontSize(13);
             doc.setFillColor("#1a6779");
          }
 
