@@ -139,8 +139,12 @@ document.getElementById("enviar").addEventListener("click",function(){
 });
 
 document.getElementById("siguiente").addEventListener("click",function(){
-    if(numPregunta!=20){
+    if(numPregunta==19){
         numPregunta++;
+        document.getElementById("siguiente").style.display = "none";
+    }else if(numPregunta!=20){
+        numPregunta++;
+        document.getElementById("siguiente").style.display = "inline-block";
     }
 })
 
