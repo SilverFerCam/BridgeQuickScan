@@ -87,7 +87,7 @@ document.getElementById("pdf").addEventListener("click",function(){
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
                resultados[i] = "Reactively engaged with aligning IT practices and services with changing business needs through the\nongoing identification and improvement of crucial elements involved in the effective management of products and services.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "Fully engaged with aligning IT practices and services with changing business needs through the ongoing\n dentification and improvement of all elements involved in the effective management of products and services.";
+               resultados[i] = "Fully engaged with aligning IT practices and services with changing business needs through the ongoing\nidentification and improvement of all elements involved in the effective management of products and services.";
             }
             break;
          }
@@ -105,22 +105,22 @@ document.getElementById("pdf").addEventListener("click",function(){
          //Decima Categoria
          case 9:{
             if(datos[i]>=1 && datos[i]<=2.45){
-               resultados[i] = "Low maturity of service management practices that have been developed and integrated with a mostly\nstable IT service delivery. Examples: Change Control, Incident Management, IT Asset Management, \nService Configuration Management and\n Service desk.";
+               resultados[i] = "Low maturity of service management practices that have been developed and integrated with a mostly\nstable IT service delivery. Examples: Change Control, Incident Management, IT Asset Management, \nService Configuration Management and Service desk.";
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
-               resultados[i] = "Average maturity of service management practices that have been developed and integrated with a\nsuccessful IT service delivery. Examples: Change Control, Incident Management, IT Asset Management, \nService Configuration Management and\n Service desk.";
+               resultados[i] = "Average maturity of service management practices that have been developed and integrated with a\nsuccessful IT service delivery. Examples: Change Control, Incident Management, IT Asset Management, \nService Configuration Management and Service desk.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "High maturity of service management practices that have been developed and integrated with a successful\nand proactive IT service delivery. Examples: Change Control, Incident Management, IT Asset \nManagement, Service Configuration\n Management and Service desk.";
+               resultados[i] = "High maturity of service management practices that have been developed and integrated with a successful\nand proactive IT service delivery. Examples: Change Control, Incident Management, IT Asset \nManagement, Service Configuration Management and Service desk.";
             }
             break;
          }
          //Undecima Categoria
          case 10:{
             if(datos[i]>=1 && datos[i]<=2.45){
-               resultados[i] = "Low maturity of technical management practices that have been adapted from technology domains and integrated\nin a mostly stable IT service delivery by a purpose of expanding or shifting their focus \nfrom technology solutions to IT\n services. Examples: Deployment management, infrastructure and platform management.";
+               resultados[i] = "Low maturity of technical management practices that have been adapted from technology domains and integrated\nin a mostly stable IT service delivery by a purpose of expanding or shifting their focus \nfrom technology solutions to IT services. Examples: Deployment management, infrastructure and platform management.";
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
-               resultados[i] = "Average maturity of technical management practices that have been adapted from technology domains and\nintegrated in a successful IT service delivery by a purpose of expanding or shifting their focus \nfrom technology solutions to IT\n services. Examples: Deployment management, infrastructure and platform management.";
+               resultados[i] = "Average maturity of technical management practices that have been adapted from technology domains and\nintegrated in a successful IT service delivery by a purpose of expanding or shifting their focus \nfrom technology solutions to IT services. Examples: Deployment management, infrastructure and platform management.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "High maturity of technical management practices that have been adapted from technology domains and integrated\nin a successful and proactive IT service delivery by a purpose of expanding or shifting \ntheir focus from technology solutions\n to IT services. Examples: Deployment management, infrastructure and platform management.";
+               resultados[i] = "High maturity of technical management practices that have been adapted from technology domains and integrated\nin a successful and proactive IT service delivery by a purpose of expanding or shifting \ntheir focus from technology solutions to IT services. Examples: Deployment management, infrastructure and platform management.";
             }
             break;
          }
@@ -131,7 +131,7 @@ document.getElementById("pdf").addEventListener("click",function(){
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
                resultados[i] = "General commitment to and practice of continual improvement that is embedded into every IT activity. There\nis some culture of continual improvement, backed up by respective techniques and mostly in \nalignment with strategic objectives.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "Strong commitment to and regular, proactive practice of continual improvement that is embedded into every IT\nactivity. There is a strong culture of continual improvement, backed up by respective \ntechniques and always in alignment with\n strategic objectives.";
+               resultados[i] = "Strong commitment to and regular, proactive practice of continual improvement that is embedded into every IT\nactivity. There is a strong culture of continual improvement, backed up by respective \ntechniques and always in alignment with strategic objectives.";
             }
             break;
          }
@@ -201,26 +201,26 @@ document.getElementById("pdf").addEventListener("click",function(){
          setDato();
          doc.text(20,175,resultados[6]);
          setTitulo();
-         doc.text(20,190,'What is your level of engagement with improvement initiatives, plans and status reports?: ');
+         doc.text(20,195,'What is your level of engagement with improvement initiatives, plans and status reports?: ');
          setDato();
-         doc.text(20,195,resultados[7]);
+         doc.text(20,200,resultados[7]);
          setTitulo();
-         doc.text(20,210,'General Mgmt Practices: ');
+         doc.text(20,215,'General Mgmt Practices: ');
          setDato();
-         console.log(resultados);
-         doc.text(20,215,resultados[8]);
+         doc.text(20,220,resultados[8]);
          setTitulo();
-         doc.text(20,230,'Service Management Practices: ');
+         doc.text(20,235,'Service Management Practices: ');
          setDato();
-         doc.text(20,235,resultados[9]);
+         doc.text(20,240,resultados[9]);
          setTitulo();
-         doc.text(20,250,'Technical Mgmt Practices: ');
+         doc.text(20,255,'Technical Mgmt Practices: ');
          setDato();
-         doc.text(20,255,resultados[10]);
+         doc.text(20,260,resultados[10]);
          setTitulo();
-         doc.text(20,270,'To what extent does my organization apply improvement methodologies, culture and techniques, in alignment with our strategic objectives?: ');
+         doc.addPage();
+         doc.text(20,30,'To what extent does my organization apply improvement methodologies, culture and techniques, in alignment with our strategic objectives?: ');
          setDato();
-         doc.text(20,275,resultados[11]);
+         doc.text(20,35,resultados[11]);
          doc.save('DatosCuestionario.pdf');
       }
    });
