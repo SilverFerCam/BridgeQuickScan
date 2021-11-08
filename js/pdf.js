@@ -201,7 +201,7 @@ document.getElementById("pdf").addEventListener("click",function(){
          setDato();
          doc.text(20,175,resultados[6]);
          setTitulo();
-         doc.text(20,195,'What is your level of engagement with improvement initiatives, plans and status reports?: ');
+         doc.text(20,195,'Continual Improvement: ');
          setDato();
          doc.text(20,200,resultados[7]);
          setTitulo();
@@ -218,7 +218,7 @@ document.getElementById("pdf").addEventListener("click",function(){
          doc.text(20,260,resultados[10]);
          setTitulo();
          doc.addPage();
-         doc.text(20,30,'To what extent does my organization apply improvement methodologies, culture and techniques, in alignment with our strategic objectives?: ');
+         doc.text(20,30,'Improve: ');
          setDato();
          doc.text(20,35,resultados[11]);
          doc.save('DatosCuestionario.pdf');
