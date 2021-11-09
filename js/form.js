@@ -1,3 +1,5 @@
+/*Modificaciones dinamicas del Cuestionario*/
+
 //Declaramos una variable para referenciar al numero de la pregunta a mostrar
 var visible = 1;
 var indice = 1;
@@ -69,6 +71,7 @@ document.getElementById("enviar").addEventListener("click",function(){
     }
 });
 
+//Develop del boton back
 document.getElementById("back").addEventListener("click",function(){
     if(visible!=1){
         visible--;

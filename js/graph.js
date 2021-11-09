@@ -1,4 +1,4 @@
-/*Creacion y actualizacion de una grafica Chart.js realizado por David Fernandez*/
+/*Creacion y actualizacion de una grafica Chart.js*/
 
 //Creacion y implementacion en el HTML de la grafica
 var ctx = document.getElementById("myChart").getContext("2d");
@@ -52,6 +52,7 @@ var Cat2 = [];
 var Cat8 = [];
 var Cat9 = [];
 
+//Develop del boton Next hasta la pregunta 20
 document.getElementById("enviar").addEventListener("click",function(){
     var arrayRadios = document.getElementsByName("p"+numPregunta);
     for(i=0;i<arrayRadios.length;i++){
@@ -138,6 +139,8 @@ document.getElementById("enviar").addEventListener("click",function(){
 
 });
 
+//Tras la pregunta 20 el boton Next es sustituido por el siguiente boton cuya finalidad
+//Es unicamente pasar la pagina hacia adelante sin modificar la grafica
 document.getElementById("siguiente").addEventListener("click",function(){
     if(numPregunta==19){
         numPregunta++;
@@ -148,6 +151,7 @@ document.getElementById("siguiente").addEventListener("click",function(){
     }
 })
 
+//Develop del boton back
 document.getElementById("back").addEventListener("click",function(){
     if(numPregunta==3 ||numPregunta==5 ||numPregunta==6 ||numPregunta==7 ||numPregunta==8 ||numPregunta==9 ||numPregunta==10 ||numPregunta==11 ||numPregunta==13 ||numPregunta==19 ||numPregunta==20){
         numPregunta--;
@@ -157,6 +161,7 @@ document.getElementById("back").addEventListener("click",function(){
     }    
 });
 
+//Develop del boton update
 document.getElementById("update").addEventListener("click",function(){
     var arrayRadios = document.getElementsByName("p"+numPregunta);
 

@@ -1,6 +1,11 @@
+/*Creacion del PDF al pulsar el boton Generate PDF*/
+
+//Evento de boton
 document.getElementById("pdf").addEventListener("click",function(){
    var datos = myChart.data.datasets[0].data;   
    var resultados = [];
+
+   //Recogida de datos del cuestionario y filtracion para resultados del PDF
    for(i=0;i<datos.length;i++){
       switch(i){
          //Primera Categoria
@@ -138,11 +143,13 @@ document.getElementById("pdf").addEventListener("click",function(){
       }
    }
 
+   //Parte visible del PDF
    html2canvas(document.getElementById("graph"), {
       onrendered: function(canvas) {
          var img = canvas.toDataURL();
          var doc = new jsPDF();
 
+         //Estilos de las fuentes
          function setCabecera(){
             doc.setFont("helvetica","bold");
             doc.setFontSize(20);
