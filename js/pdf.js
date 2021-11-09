@@ -196,12 +196,11 @@ document.getElementById("pdf").addEventListener("click",function(){
          setDato();
          doc.text(20,155,resultados[5]);
          setTitulo();
-         //doc.addPage();
          doc.text(20,170,'Deliver and Support: ');
          setDato();
          doc.text(20,175,resultados[6]);
          setTitulo();
-         doc.text(20,195,'Continual Improvement: ');
+         doc.text(20,195,'Improve: ');
          setDato();
          doc.text(20,200,resultados[7]);
          setTitulo();
@@ -217,8 +216,10 @@ document.getElementById("pdf").addEventListener("click",function(){
          setDato();
          doc.text(20,260,resultados[10]);
          setTitulo();
+
+         //Tercera Pagina
          doc.addPage();
-         doc.text(20,30,'Improve: ');
+         doc.text(20,30,'Continual Improvement: ');
          setDato();
          doc.text(20,35,resultados[11]);
          doc.save('DatosCuestionario.pdf');
