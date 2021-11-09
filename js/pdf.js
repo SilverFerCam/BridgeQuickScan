@@ -6,11 +6,11 @@ document.getElementById("pdf").addEventListener("click",function(){
          //Primera Categoria
          case 0:{
             if(datos[i]>=1 && datos[i]<=2.45){
-               resultados[i] = "Little ability to act upon and own the IT service (portfolio) delivery without top-down guidance\nfrom upper management. Likely to be blocked by changes in strategy, type of work or management structure unless \ntold what to do next. Likely IT executes requests from the business without focusing on value and aligning priority and expectations.";
+               resultados[i] = "Little ability to act upon and own the IT service (portfolio) delivery without top-down guidance\nfrom upper management. Likely to be blocked by changes in strategy, type of work or management structure unless \ntold what to do next. Likely IT executes requests from the business without focusing on value and aligning \npriority and expectations.";
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
                resultados[i] = "Ability to act upon and own the IT service (portfolio) delivery with little top-down and/or peer\nguidance. IT likely bases its plans for service delivery on feedback from business. Service levels are agreed \nfor the service.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "Strong ownership and vision regarding the IT service (portfolio) delivery, able to act autonomously\nand align interdependencies with other teams. Likely to actively collaborate with and seek feedback by the \nbusiness. IT is aware of of the business value of each service and seeks to improve service delivery.";
+               resultados[i] = "Strong ownership and vision regarding the IT service (portfolio) delivery, able to act autonomously\nand align interdependencies with other teams. Likely to actively collaborate with and seek feedback by the \nbusiness. IT is aware of of the business value of each service and seeks to \nimprove service delivery.";
             }
             break;
          }
@@ -72,7 +72,7 @@ document.getElementById("pdf").addEventListener("click",function(){
          //Septima Categoria
          case 6:{
             if(datos[i]>=1 && datos[i]<=2.45){
-               resultados[i] = "A handful of IT Services are delivered and supported according to agreed specifications and\nstakeholders’ expectations, the rest being delivered in an error-prone way. IT assumes what is valuable for its \nkey stakeholders and is often not able to prioritize and offer transparency in delivery unless being requested to do so.";
+               resultados[i] = "A handful of IT Services are delivered and supported according to agreed specifications and\nstakeholders’ expectations, the rest being delivered in an error-prone way. IT assumes what is valuable for its \nkey stakeholders and is often not able to prioritize and offer transparency in delivery unless being requested \nto do so.";
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
                resultados[i] = "Most IT Services are delivered and supported according to agreed specifications and stakeholders’\nexpectations. IT is being reactively told by the stakeholders what is valuable and is able to prioritize and \noffer transparency in delivery on demand.";
             }else if(datos[i]>=4 && datos[i]<=5){
@@ -83,11 +83,11 @@ document.getElementById("pdf").addEventListener("click",function(){
          //Octava Categoria
          case 7:{
             if(datos[i]>=1 && datos[i]<=2.45){
-               resultados[i] = "Barely engaged with aligning IT practices and services with changing business needs through sporadic\nidentification and improvement of crucial elements involved in the effective management of products and services.";
+               resultados[i] = "Barely engaged with aligning IT practices and services with changing business needs through sporadic\nidentification and improvement of crucial elements involved in the effective management \nof products and services.";
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
-               resultados[i] = "Reactively engaged with aligning IT practices and services with changing business needs through the\nongoing identification and improvement of crucial elements involved in the effective management of products and services.";
+               resultados[i] = "Reactively engaged with aligning IT practices and services with changing business needs through the\nongoing identification and improvement of crucial elements involved in the effective \nmanagement of products and services.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "Fully engaged with aligning IT practices and services with changing business needs through the ongoing\nidentification and improvement of all elements involved in the effective management of products and services.";
+               resultados[i] = "Fully engaged with aligning IT practices and services with changing business needs through the ongoing\nidentification and improvement of all elements involved in the effective management \nof products and services.";
             }
             break;
          }
@@ -129,9 +129,9 @@ document.getElementById("pdf").addEventListener("click",function(){
             if(datos[i]>=1 && datos[i]<=2.45){
                resultados[i] = "Loose commitment to and sporadic practice of continual improvement that is not embedded into everyday IT\nactivity. Lack of strong culture of continual improvement, backed up by respective techniques \nand aligned with strategic objectives.";
             }else if(datos[i]>=2.5 && datos[i]<=3.9){
-               resultados[i] = "General commitment to and practice of continual improvement that is embedded into every IT activity. There\nis some culture of continual improvement, backed up by respective techniques and mostly in \nalignment with strategic objectives.";
+               resultados[i] = "General commitment to and practice of continual improvement that is embedded into every IT activity. There\nis some culture of continual improvement, backed up by respective techniques and mostly in alignment \nwith strategic objectives.";
             }else if(datos[i]>=4 && datos[i]<=5){
-               resultados[i] = "Strong commitment to and regular, proactive practice of continual improvement that is embedded into every IT\nactivity. There is a strong culture of continual improvement, backed up by respective \ntechniques and always in alignment with strategic objectives.";
+               resultados[i] = "Strong commitment to and regular, proactive practice of continual improvement that is embedded into every IT\nactivity. There is a strong culture of continual improvement, backed up by respective techniques and \nalways in alignment with strategic objectives.";
             }
             break;
          }
@@ -143,29 +143,27 @@ document.getElementById("pdf").addEventListener("click",function(){
          var img = canvas.toDataURL();
          var doc = new jsPDF();
 
-         console.log(doc.getFontList());
-
          function setCabecera(){
-            doc.setFont("Helvetica","bold");
+            doc.setFont("helvetica","bold");
             doc.setFontSize(20);
-            doc.setFillColor("#91004");
+            doc.setTextColor("#91004b");
          }
 
          function setTitulo(){
             doc.setFont("helvetica","bold");
             doc.setFontSize(13);
-            doc.setFillColor("#1a6779");
+            doc.setTextColor("#1a6779");
          }
 
          function setDato(){
             doc.setFont("helvetica","normal");
             doc.setFontSize(10);
-            doc.setFillColor("#adacb2");
+            doc.setTextColor("#adacb2");
          }
 
          //Primera Pagina
          setCabecera();
-         doc.text(20,30,'Quiz Results:');
+         doc.text(20,30,'Graph Results:');
          doc.addImage(img, 30, 35);
 
          //Segunda Pagina
@@ -176,45 +174,45 @@ document.getElementById("pdf").addEventListener("click",function(){
          setDato();
          doc.text(20,55,resultados[0]);
          setTitulo();
-         doc.text(20,70,'Governance: ');
+         doc.text(20,75,'Governance: ');
          setDato();
-         doc.text(20,75,resultados[1]);
+         doc.text(20,80,resultados[1]);
          setTitulo();
-         doc.text(20,90,'Plan: ');         
+         doc.text(20,95,'Plan: ');         
          setDato();
-         doc.text(20,95,resultados[2]);
+         doc.text(20,100,resultados[2]);
          setTitulo();
-         doc.text(20,110,'Engage: ');
+         doc.text(20,115,'Engage: ');
          setDato();
-         doc.text(20,115,resultados[3]);
+         doc.text(20,120,resultados[3]);
          setTitulo();
-         doc.text(20,130,'Design & Transition: ');
+         doc.text(20,135,'Design & Transition: ');
          setDato();
-         doc.text(20,135,resultados[4]);
+         doc.text(20,140,resultados[4]);
          setTitulo();
-         doc.text(20,150,'Obtain or Build: ');
+         doc.text(20,155,'Obtain or Build: ');
          setDato();
-         doc.text(20,155,resultados[5]);
+         doc.text(20,160,resultados[5]);
          setTitulo();
-         doc.text(20,170,'Deliver and Support: ');
+         doc.text(20,175,'Deliver and Support: ');
          setDato();
-         doc.text(20,175,resultados[6]);
+         doc.text(20,180,resultados[6]);
          setTitulo();
-         doc.text(20,195,'Improve: ');
+         doc.text(20,200,'Improve: ');
          setDato();
-         doc.text(20,200,resultados[7]);
+         doc.text(20,205,resultados[7]);
          setTitulo();
-         doc.text(20,215,'General Mgmt Practices: ');
+         doc.text(20,220,'General Mgmt Practices: ');
          setDato();
-         doc.text(20,220,resultados[8]);
+         doc.text(20,225,resultados[8]);
          setTitulo();
-         doc.text(20,235,'Service Management Practices: ');
+         doc.text(20,240,'Service Management Practices: ');
          setDato();
-         doc.text(20,240,resultados[9]);
+         doc.text(20,245,resultados[9]);
          setTitulo();
-         doc.text(20,255,'Technical Mgmt Practices: ');
+         doc.text(20,260,'Technical Mgmt Practices: ');
          setDato();
-         doc.text(20,260,resultados[10]);
+         doc.text(20,265,resultados[10]);
          setTitulo();
 
          //Tercera Pagina
